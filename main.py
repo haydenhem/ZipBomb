@@ -7,7 +7,7 @@ def free(path):
 print("Bytes Free:",free(path))
 FILENAME = "getboomed.txt"
 SIZE = int(free(path))
-okay = input("Are you ready to boom? Type anything to start!")
+okay = input("Are you ready to boom? This will fill whatever drive you are running this script on. Type anything to start!")
 while True:
     if SIZE > 100:
         with open(FILENAME, "wb") as file:

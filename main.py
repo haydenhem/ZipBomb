@@ -22,6 +22,6 @@ if yes.__contains__("fill"):
     manytbs = input("Are you sure you want to fill your drive? This will be generating "+str(shutil.disk_usage('/').free / gb) + " gigabytes. Type anything than press enter to continue.")
     size = shutil.disk_usage()
 with open('boomed', 'wb') as f:
-    f.seek(size) # One GB
+    f.seek(size)
     f.write(b'0')
 print('Done')
